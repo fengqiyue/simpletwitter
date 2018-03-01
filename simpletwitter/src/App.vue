@@ -1,13 +1,35 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <logo/>
+          <transition>
+            <router-view></router-view>
+          </transition>
+        </div>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <script>
+import Logo from './components/logo.vue'
+
 export default {
-  name: 'App'
+  name: 'app',
+  data () {
+    return {
+    }
+  },
+  components: {
+    Logo,
+   
+  },
+  mounted:function(){
+  }
+
 }
 </script>
 
